@@ -165,6 +165,9 @@ img{
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)),
     url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     margin-left: auto;
     margin-right: auto;
 }
@@ -214,6 +217,7 @@ img{
 }
 .feature-list{
     display: flex;
+    
 }
 .feature-list .item{
     width: 270px;
@@ -221,30 +225,16 @@ img{
 .feature-list .item:not(:last-child){
     margin-right: 30px;
 }
-.feature-list .item::before{
-   display: block;
-   content: '';
+.feature-list-item-icons{
+   display: flex;
    height: 120px;
-   background-repeat: no-repeat;
-   background-size: 70px 70px;
-   background-position: center;
    background-color: #F5F4FA;
    border-radius: 4px;
    margin-bottom: 30px;
-
-}
-.item-attention::before{
-    background-image: url(../images/antenna.svg);
-   }
-.item-punctuality::before{
-    background-image: url(../images/clock.svg);
+   justify-content: center;
+   align-items: center;
   }
-.item-planning::before{
-    background-image: url(../images/diagram.svg);
-   }
-.item-technology::before{
-    background-image: url(../images/astronaut.svg);
-}
+
 .feature-list .title{
     color: var(--title-text-color);
     font-weight: 700;
@@ -337,10 +327,12 @@ img{
    .soc-icons{
     fill:  #AFB1B8;;
    }
-   .soc-link:hover{
+   .soc-link:hover,
+   .soc-link:focus{
     background-color:var(--accent-color);
    }
-   .soc-link:hover .soc-icons{
+   .soc-link:hover .soc-icons,
+   .soc-link:focus .soc-icons{
     fill: #FFFFFF;
    }
 
@@ -368,10 +360,12 @@ img{
 .clients-logo-icons{
  fill:  #AFB1B8;
 }
-.clients-logo-link:hover{
+.clients-logo-link:hover,
+.clients-logo-link:focus{
     border: 1px solid var(--accent-color);
 }
-.clients-logo-link:hover .clients-logo-icons{
+.clients-logo-link:hover .clients-logo-icons,
+.clients-logo-link:focus .clients-logo-icons{
  fill: var(--accent-color);
 }
 
@@ -438,7 +432,8 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
 .list-cards .item{
     margin: 15px;
 }
-.list-cards .item:hover{
+.list-cards .link:hover,
+.list-cards .link:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -534,9 +529,11 @@ margin-bottom: 9px;
 .join-soc-icons{
  fill:  #FFFFFF;
 }
-.join-soc-link:hover{
+.join-soc-link:hover,
+.join-soc-link:focus{
  background-color:var(--accent-color);
 }
-.join-soc-link:hover .join-soc-icons{
+.join-soc-link:hover .join-soc-icons,
+.join-soc-link:focus .join-soc-icons{
  fill: #FFFFFF;
 }
